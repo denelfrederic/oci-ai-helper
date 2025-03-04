@@ -16,7 +16,7 @@ const GlassmorphicCard: React.FC<GlassmorphicCardProps> = ({
   return (
     <div 
       className={cn(
-        "glass rounded-2xl p-6 relative overflow-hidden",
+        "glass rounded-xl p-6 relative overflow-hidden",
         hoverEffect && "transition-all duration-300 hover:shadow-lg hover:scale-[1.01]",
         className
       )}

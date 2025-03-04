@@ -13,51 +13,51 @@ const About = () => {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-center">About OCI Assistant</h1>
-              <p className="text-xl text-primary/80 text-center mb-12">
-                Intelligent AI assistance powered by advanced language models.
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6 text-center">À propos de OneClick Invest</h1>
+              <p className="text-xl text-[#0f172a]/80 text-center mb-12">
+                Impliquez, financez, accélérez avec notre assistant IA intelligent.
               </p>
               
               <GlassmorphicCard className="mb-12">
-                <h2 className="text-2xl font-medium mb-4">Our Mission</h2>
-                <p className="text-primary/80 mb-4">
-                  OCI Assistant aims to provide intelligent, accurate information about OCI Fund investments and portfolio companies, making it easier for users to access and understand complex investment information.
+                <h2 className="text-2xl font-medium mb-4">Notre Mission</h2>
+                <p className="text-[#0f172a]/80 mb-4">
+                  OneClick Invest a pour mission de fournir des informations intelligentes et précises sur les investissements et les entreprises de notre portefeuille, facilitant ainsi l'accès et la compréhension d'informations financières complexes.
                 </p>
-                <p className="text-primary/80">
-                  Leveraging the latest in artificial intelligence technology, we create a seamless experience that integrates with WordPress websites and provides natural, human-like interactions.
+                <p className="text-[#0f172a]/80">
+                  En exploitant les dernières technologies d'intelligence artificielle, nous créons une expérience transparente qui s'intègre aux sites WordPress et offre des interactions naturelles et humaines.
                 </p>
               </GlassmorphicCard>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <GlassmorphicCard>
-                  <h2 className="text-2xl font-medium mb-4">WordPress Integration</h2>
-                  <p className="text-primary/80">
-                    Our assistant is designed to integrate smoothly with WordPress sites, allowing for easy installation and configuration. The plugin automatically inherits your site's styling and can be customized to match your brand.
+                  <h2 className="text-2xl font-medium mb-4">Intégration WordPress</h2>
+                  <p className="text-[#0f172a]/80">
+                    Notre assistant est conçu pour s'intégrer parfaitement aux sites WordPress, permettant une installation et une configuration faciles. Le plugin hérite automatiquement du style de votre site et peut être personnalisé pour correspondre à votre marque.
                   </p>
                 </GlassmorphicCard>
                 
                 <GlassmorphicCard>
-                  <h2 className="text-2xl font-medium mb-4">OpenAI Technology</h2>
-                  <p className="text-primary/80">
-                    Powered by OpenAI's advanced language models, OCI Assistant can understand complex queries, provide nuanced responses, and learn from interactions to continuously improve its assistance.
+                  <h2 className="text-2xl font-medium mb-4">Technologie OpenAI</h2>
+                  <p className="text-[#0f172a]/80">
+                    Propulsé par les modèles de langage avancés d'OpenAI, OneClick Invest peut comprendre des requêtes complexes, fournir des réponses nuancées et apprendre des interactions pour améliorer continuellement son assistance.
                   </p>
                 </GlassmorphicCard>
               </div>
               
               <GlassmorphicCard>
-                <h2 className="text-2xl font-medium mb-4">Get Started</h2>
-                <p className="text-primary/80 mb-4">
-                  Integrating OCI Assistant with your WordPress site is simple. Our plugin can be installed directly from the WordPress plugin repository, or you can download it from our website.
+                <h2 className="text-2xl font-medium mb-4">Commencez</h2>
+                <p className="text-[#0f172a]/80 mb-4">
+                  L'intégration de OneClick Invest avec votre site WordPress est simple. Notre plugin peut être installé directement depuis le référentiel de plugins WordPress, ou vous pouvez le télécharger depuis notre site web.
                 </p>
-                <p className="text-primary/80 mb-4">
-                  Once installed, you'll need to configure your OpenAI API key and customize the assistant to your needs. The entire process takes just a few minutes.
+                <p className="text-[#0f172a]/80 mb-4">
+                  Une fois installé, vous devrez configurer votre clé API OpenAI et personnaliser l'assistant selon vos besoins. L'ensemble du processus ne prend que quelques minutes.
                 </p>
                 <div className="mt-6">
                   <a 
                     href="/chat" 
-                    className="inline-block px-6 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+                    className="inline-block px-6 py-3 bg-[#2563eb] text-white rounded-full hover:bg-[#2563eb]/90 transition-colors"
                   >
-                    Try the Demo
+                    Essayer la démo
                   </a>
                 </div>
               </GlassmorphicCard>

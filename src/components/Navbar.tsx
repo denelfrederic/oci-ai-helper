@@ -28,35 +28,39 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-4 md:px-6">
         <Link 
           to="/" 
-          className="text-xl font-display font-medium text-primary hover:opacity-80 transition-opacity"
+          className="flex items-center space-x-2 hover:opacity-90 transition-opacity"
         >
-          OCI Assistant
+          <img 
+            src="/lovable-uploads/2fb6a251-e85e-46a0-8ab8-5436f1654580.png" 
+            alt="OneClick Invest Logo" 
+            className="h-10" 
+          />
         </Link>
         
         <div className="flex items-center space-x-1 md:space-x-4">
           <Link 
             to="/" 
-            className="px-3 py-2 text-sm font-medium text-primary/80 hover:text-primary transition-colors"
+            className="px-3 py-2 text-sm font-medium text-[#0f172a]/80 hover:text-[#0f172a] transition-colors"
           >
-            Home
+            Accueil
           </Link>
           <Link 
             to="/chat" 
-            className="px-3 py-2 text-sm font-medium text-primary/80 hover:text-primary transition-colors"
+            className="px-3 py-2 text-sm font-medium text-[#0f172a]/80 hover:text-[#0f172a] transition-colors"
           >
             Chat
           </Link>
           <Link 
             to="/about" 
-            className="px-3 py-2 text-sm font-medium text-primary/80 hover:text-primary transition-colors"
+            className="px-3 py-2 text-sm font-medium text-[#0f172a]/80 hover:text-[#0f172a] transition-colors"
           >
-            About
+            À propos
           </Link>
           <Link
             to="/chat"
-            className="ml-2 px-4 py-2 text-sm font-medium bg-primary text-white rounded-full hover:bg-primary/90 transition-colors"
+            className="ml-2 px-4 py-2 text-sm font-medium bg-[#2563eb] text-white rounded-full hover:bg-[#2563eb]/90 transition-colors"
           >
-            Start Now
+            Commencer
           </Link>
         </div>
       </div>
