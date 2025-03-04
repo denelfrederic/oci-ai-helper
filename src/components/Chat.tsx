@@ -10,6 +10,7 @@ interface Message {
   role: 'user' | 'assistant';
   content: string;
   animationComplete?: boolean;
+  isError?: boolean;
 }
 
 const Chat: React.FC = () => {
@@ -57,14 +58,34 @@ const Chat: React.FC = () => {
     try {
       const response = await searchQuery(userMessage);
       
+      // Check if the response starts with "Désolé, je n'ai pas pu traiter votre demande"
+      const isErrorResponse = response.startsWith('Désolé, je n\'ai pas pu traiter votre demande');
+      
       setMessages(prev => [...prev, { 
         role: 'assistant', 
         content: response,
-        animationComplete: false
+        animationComplete: false,
+        isError: isErrorResponse
       }]);
+      
+      if (isErrorResponse) {
+        console.error('Erreur de requête OpenAI:', response);
+        toast.error('Erreur de communication avec OpenAI');
+      }
     } catch (error) {
-      console.error('Error getting response:', error);
-      toast.error('Une erreur est survenue. Veuillez réessayer.');
+      console.error('Erreur détaillée:', error);
+      const errorMessage = error instanceof Error 
+        ? error.message 
+        : 'Une erreur inconnue est survenue';
+      
+      setMessages(prev => [...prev, { 
+        role: 'assistant', 
+        content: `Désolé, je n'ai pas pu traiter votre demande: ${errorMessage}`,
+        animationComplete: false,
+        isError: true
+      }]);
+      
+      toast.error('Échec de la communication avec OpenAI');
     } finally {
       setIsLoading(false);
     }
@@ -128,7 +149,9 @@ const Chat: React.FC = () => {
                     className={`max-w-[85%] md:max-w-[75%] rounded-2xl p-4 ${
                       message.role === 'user' 
                         ? 'bg-primary text-white rounded-tr-none' 
-                        : 'bg-accent text-primary rounded-tl-none'
+                        : message.isError 
+                          ? 'bg-red-100 text-red-800 rounded-tl-none border border-red-300'
+                          : 'bg-accent text-primary rounded-tl-none'
                     }`}
                   >
                     {message.role === 'assistant' && !message.animationComplete ? (
